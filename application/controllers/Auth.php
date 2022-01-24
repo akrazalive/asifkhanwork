@@ -29,7 +29,7 @@ class Auth extends MY_Controller
 			    if ($result['success'] != 1) {
 			        //False - What happens when user is not verified
 			        $this->view_data['error']   = "true";
-			        $this->view_data['message'] = "Error: Verificación de Captcha inválida";
+			        $this->view_data['message'] = "Error:Verificación de Captcha inválida";
 			        redirect('');
 			    }
 
@@ -47,7 +47,7 @@ class Auth extends MY_Controller
 			} else {
 				$this->view_data['error']    = "true";
 				$this->view_data['username'] = $this->security->xss_clean($_POST['username']);
-				$this->view_data['message']  = "Error: Login inválido o incorrecto";
+				$this->view_data['message']  = "Error:Login inválido o incorrecto";
 			}
 
 		}
